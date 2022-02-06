@@ -1,0 +1,19 @@
+<section id="app">
+  <header>
+    <h1>Daily Todo List</h1>
+  </header>
+  <form [formGroup]="todoForm" (ngSubmit)="add()">
+    <input type="text" name="task" formControlName="task" placeholder="Enter Todo Here!">
+    <button type="submit" [disabled]="todoForm.touched && todoForm.invalid" class="cursor">ADD</button>
+  </form>
+  <div *ngIf="(todos$ | async) as todosData" id="todos">
+    <h3 *ngIf="todosData.length === 0" style="text-align: center;">No Task yet</h3>
+    <div *ngFor="let todo of todosData">
+      <app-todo [task]="todo"></app-todo>
+    </div>
+  </div>
+
+  <footer>
+    <button (click)="clearTodos()" class="cursor">Clear Todos</button>
+  </footer>
+</section>

@@ -1,0 +1,55 @@
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to top right,#dfd765,#fcf263);
+    min-height: 100vh;
+
+        header {
+            h1{
+                text-align: center;
+                font-family: 'Sriracha', cursive;
+                color:rgb(4, 0, 10);
+                font: xx-large;
+            }
+        }
+        
+        #todos{
+            min-height: 40vh;
+            width: 95%;
+            padding: 10px;
+            border-radius: 1.5rem;
+            margin-bottom: 70px;
+            background: linear-gradient(to bottom right,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+        }
+
+        button{
+            border: none;
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            color: black;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+        form{
+            display:flex;
+            justify-content: center;
+            align-items: center; 
+        input{
+            border: 2px solid #42A5F5;
+            outline: none;
+            height: 35px;
+            margin-left: 20px;
+            padding: 5px;
+            border-radius: 3px;
+            width: 100%;
+        }
+    }
+        @media only screen and (min-width: 480px) {
+            #todos{
+                width: 40%;
+            }
+        }
+}
